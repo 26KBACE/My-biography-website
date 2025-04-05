@@ -115,19 +115,19 @@
             </div>
         </section>
 
-        <!-- Contact Form -->
+       <!-- Contact Form -->
         <section class="contact my-4">
             <h2>Contact Me</h2>
             <form id="contact-form" name="contact-form" method="POST" data-netlify="true" class="mx-auto">
-            <input type="hidden" name="form-name" value="contact-form" />
-            <div class="mb-2"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div>
-            <div class="mb-2"><input type="email" name="email" class="form-control" placeholder="Your Email" required></div>
-            <div class="mb-2"><textarea name="message" class="form-control" placeholder="Your Message" rows="3" required></textarea></div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-         </form>
+                <input type="hidden" name="form-name" value="contact-form" />
+                <input type="hidden" name="subject" value="New message from my website" /> <!-- Optional: Custom email subject -->
+                <div class="mb-2"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div>
+                <div class="mb-2"><input type="email" name="email" class="form-control" placeholder="Your Email" required></div>
+                <div class="mb-2"><textarea name="message" class="form-control" placeholder="Your Message" rows="3" required></textarea></div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </section>
 
-        <!-- YouTube -->
        <!-- YouTube -->
       <section class="youtube my-4">
           <h2>My YouTube Channel</h2>
@@ -151,5 +151,16 @@
             <a href="https://www.youtube.com/@Brian_2000k" target="_blank"><img src="images/youtube-icon.png" alt="YouTube" class="social-icon">YouTube</a></p>
         </div>
     </footer>
+        <!-- Removed JavaScript for form submission since Netlify Forms will handle it
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const response = await fetch('/submit', { method: 'POST', body: formData });
+            if (response.ok) alert('Message sent!');
+            e.target.reset();
+        });
+    </script>
+    -->
 </body>
 </html>

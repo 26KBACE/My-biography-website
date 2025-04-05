@@ -1,0 +1,103 @@
+/* General Setup */
+body {
+    font-family: 'Century Gothic', sans-serif; /* Fancy font for everything */
+    background: url('images/background-brian.jpg') no-repeat center center fixed; /* Your photo as background */
+    background-size: cover; /* Fills the screen */
+    color: #fff; /* White text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Light shadow for readability */
+    margin: 0; /* No extra space */
+}
+
+/* Header */
+header {
+    background: #1a1a1a; /* Dark gray */
+    border-bottom: 2px solid #fff; /* White line for flair */
+}
+
+header h1 {
+    font-size: 2.5em; /* Big title */
+    margin: 0; /* No extra space */
+}
+
+.bible-verse {
+    background: rgba(255, 215, 0, 0.8); /* Gold, semi-transparent */
+    color: #333; /* Dark text */
+    padding: 5px; /* Space inside */
+    font-weight: bold; /* Stands out */
+}
+
+/* Bio */
+.profile-img {
+    width: 300px; /* Medium size (smaller for low-spec) */
+    height: auto;
+    border-radius: 50%; /* Circle shape */
+    border: 3px solid #fff; /* White border */
+}
+
+/* Gallery */
+.gallery-img {
+    width: 100%; /* Fits its space */
+    border-radius: 50px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth zoom */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Tiny zoom on hover */
+}
+
+/* Experience */
+.job-card {
+    max-width: 500px; /* Not too wide */
+    background: rgba(255, 255, 255, 0.9); /* White, slightly see-through */
+    color: #333; /* Dark text */
+    text-shadow: none; /* No shadow here */
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Light border */
+}
+
+/* Portfolio */
+.pdf-viewer {
+    width: 100%;
+    height: 500px; /* Smaller for low-spec */
+    border-radius: 5px;
+}
+
+/* Contact */
+.contact form {
+    max-width: 400px; /* Keeps it centered */
+}
+
+.btn-primary {
+    background: #ff4500; /* Orange button */
+    border: none;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    border-top: 2px solid #fff;
+}
+
+.social-icon {
+    width: 30px; /* Small icons */
+    margin: 0 10px; /* Space between */
+}
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+    .profile-img {
+        width: 200px; /* Smaller on phones */
+    }
+    header h1 {
+        font-size: 1.8em; /* Smaller title */
+    }
+    .pdf-viewer {
+        height: 200px; /* Even smaller */
+    }
+}
+.videos video {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

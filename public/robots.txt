@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /private/  # Replace with any folder you don’t want crawled (if applicable)
+Sitemap: https://brianmongare.netlify.app/sitemap.xml

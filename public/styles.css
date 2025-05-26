@@ -68,13 +68,26 @@ header {
     background: rgba(52, 152, 219, 0.10);
     color: #f1c40f;
     border-radius: 0.5rem;
-    animation: marquee 18s linear infinite;
+    /* Make container scrollable if overflow */
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
-    overflow: hidden;
+    /* Animation */
+    animation: marquee 18s linear infinite;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
 }
 @keyframes marquee {
     0% { transform: translateX(100%);}
     100% { transform: translateX(-100%);}
+}
+/* Responsive: smaller font and padding on mobile */
+@media (max-width: 767px) {
+    .bible-verse-animate {
+        font-size: 0.9rem;
+        padding: 6px 0;
+    }
 }
 
 /* Section Styling */
@@ -206,6 +219,6 @@ footer a:hover {
         padding: 1rem 0.5rem;
     }
     .bible-verse-animate {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }

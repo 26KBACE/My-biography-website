@@ -70,31 +70,36 @@ header {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .bible-verse-animate {
     display: inline-block;
     font-size: 1.15rem;
-    padding: 8px 0;
+    padding: 8px 24px;
     background: rgba(52, 152, 219, 0.10);
     color: #f1c40f;
     border-radius: 0.5rem;
     white-space: nowrap;
     box-sizing: border-box;
-    min-width: 200vw;
+    min-width: unset;
+    width: auto;
+    max-width: 90vw; /* Limit background width */
     animation: marquee 18s linear infinite;
+    overflow: hidden;
 }
 
 @keyframes marquee {
     0%   { transform: translateX(100vw);}
-    100% { transform: translateX(-100vw);}
+    100% { transform: translateX(-100%);}
 }
 
 @media (max-width: 767px) {
     .bible-verse-animate {
         font-size: 0.9rem;
-        padding: 6px 0;
-        min-width: 300vw;
+        padding: 6px 12px;
+        max-width: 98vw;
     }
 }
 

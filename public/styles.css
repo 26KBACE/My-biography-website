@@ -1,103 +1,211 @@
-/* General Setup */
+/* ====== Modern Attractive Styles for Brian Mong'are Website ====== */
+
+/* Font imports (add in HTML or here if using preprocessors) */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap'); */
+
 body {
-    font-family: 'Century Gothic', sans-serif; /* Fancy font for everything */
-    background: url('images/background-brian.jpg') no-repeat center center fixed; /* Your photo as background */
-    background-size: cover; /* Fills the screen */
-    color: #fff; /* White text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Light shadow for readability */
-    margin: 0; /* No extra space */
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f4f6fa;
+    color: #222c35;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #34495e;
+}
+
+a {
+    color: #3498db;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+a:hover, .nav-link:hover, .socials a:hover {
+    color: #1abc9c !important;
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    font-family: 'Montserrat', sans-serif;
+    background: #fff !important;
+}
+.navbar-brand {
+    font-weight: 700;
+    color: #3498db !important;
+}
+.nav-link {
+    color: #3498db !important;
+    margin: 0 10px;
+}
+.nav-link.active {
+    color: #1abc9c !important;
 }
 
 /* Header */
 header {
-    background: #1a1a1a; /* Dark gray */
-    border-bottom: 2px solid #fff; /* White line for flair */
+    background: linear-gradient(90deg, #1a1a2e 60%, #16213e 100%);
+    color: #fff;
+    padding-bottom: 2.5rem;
+    box-shadow: 0 4px 24px rgba(26,42,62,0.07);
 }
 
-header h1 {
-    font-size: 2.5em; /* Big title */
-    margin: 0; /* No extra space */
+.bible-verse-animate {
+    display: block;
+    font-size: 1.15rem;
+    margin-top: 16px;
+    padding: 8px 0;
+    background: rgba(52, 152, 219, 0.10);
+    color: #f1c40f;
+    border-radius: 0.5rem;
+    animation: marquee 18s linear infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes marquee {
+    0% { transform: translateX(100%);}
+    100% { transform: translateX(-100%);}
 }
 
-.bible-verse {
-    background: rgba(255, 215, 0, 0.8); /* Gold, semi-transparent */
-    color: #333; /* Dark text */
-    padding: 5px; /* Space inside */
-    font-weight: bold; /* Stands out */
+/* Section Styling */
+section {
+    margin-bottom: 3rem;
 }
 
-/* Bio */
+#gallery, #portfolio, #experience, #education, #youtube {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 16px rgba(52,152,219,0.07);
+}
+
+#videos, #contact {
+    background: #f9fafb;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+}
+
+label {
+    font-weight: 500;
+}
+
+/* Profile Image */
 .profile-img {
-    width: 300px; /* Medium size (smaller for low-spec) */
-    height: auto;
-    border-radius: 50%; /* Circle shape */
-    border: 3px solid #fff; /* White border */
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(26,42,62,0.2);
+    margin-bottom: 1rem;
 }
 
 /* Gallery */
 .gallery-img {
-    width: 100%; /* Fits its space */
-    border-radius: 50px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth zoom */
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 10px rgba(52,152,219,0.07);
 }
-
 .gallery-img:hover {
-    transform: scale(1.05); /* Tiny zoom on hover */
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(52,152,219,0.14);
 }
 
-/* Experience */
+/* Cards and Containers */
+.bio, .job-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(52,152,219,0.07);
+    padding: 2rem 2rem 1rem 2rem;
+    margin-bottom: 2rem;
+}
 .job-card {
-    max-width: 500px; /* Not too wide */
-    background: rgba(255, 255, 255, 0.9); /* White, slightly see-through */
-    color: #333; /* Dark text */
-    text-shadow: none; /* No shadow here */
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc; /* Light border */
+    background: #fafbfc;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1rem;
 }
 
-/* Portfolio */
+/* Portfolio PDFs */
 .pdf-viewer {
     width: 100%;
-    height: 500px; /* Smaller for low-spec */
-    border-radius: 5px;
-}
-
-/* Contact */
-.contact form {
-    max-width: 400px; /* Keeps it centered */
-}
-
-.btn-primary {
-    background: #ff4500; /* Orange button */
+    height: 300px;
     border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(52,152,219,0.07);
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+    background: #3498db;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 16px rgba(52,152,219,0.05);
+    padding: 0.6rem 1.8rem;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    background: #1abc9c;
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(26,42,62,0.10);
+}
+
+/* Socials */
+.socials a {
+    display: inline-block;
+    margin: 0 8px;
+    color: #3498db;
+    font-weight: 500;
+    font-size: 1.08rem;
+    transition: color 0.2s;
+}
+.social-icon {
+    width: 22px;
+    margin-right: 4px;
+    vertical-align: middle;
 }
 
 /* Footer */
 footer {
-    background: #1a1a1a;
-    border-top: 2px solid #fff;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 4rem;
+    border-top: 6px solid #3498db;
+    box-shadow: 0 -2px 12px rgba(26,42,62,0.09);
+}
+footer a {
+    color: #f1c40f;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: #1abc9c;
 }
 
-.social-icon {
-    width: 30px; /* Small icons */
-    margin: 0 10px; /* Space between */
-}
-
-/* Responsive for phones */
-@media (max-width: 600px) {
+/* Responsive Tweaks */
+@media (max-width: 767px) {
     .profile-img {
-        width: 200px; /* Smaller on phones */
+        width: 110px;
+        height: 110px;
     }
-    header h1 {
-        font-size: 1.8em; /* Smaller title */
+    .bio, .job-card, #gallery, #portfolio, #experience, #education, #youtube, #videos, #contact {
+        padding: 1rem 0.5rem;
     }
-    .pdf-viewer {
-        height: 200px; /* Even smaller */
+    .bible-verse-animate {
+        font-size: 1rem;
     }
-}
-.videos video {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

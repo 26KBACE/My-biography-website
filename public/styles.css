@@ -60,46 +60,35 @@ header {
     box-shadow: 0 4px 24px rgba(26,42,62,0.07);
 }
 
-/* Bible Verse Marquee */
+/* Bible Verse Marquee -- NO BACKGROUND, ONLY TEXT */
 .marquee-scroll {
     width: 100vw;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    background: transparent;
+    overflow-x: hidden;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
-
 .bible-verse-animate {
     display: inline-block;
     font-size: 1.15rem;
-    padding: 8px 24px;
-    background: rgba(52, 152, 219, 0.10);
     color: #f1c40f;
-    border-radius: 0.5rem;
+    border-radius: 0;
     white-space: nowrap;
-    box-sizing: border-box;
-    min-width: unset;
-    width: auto;
-    max-width: 90vw; /* Limit background width */
+    min-width: 200vw;
     animation: marquee 18s linear infinite;
-    overflow: hidden;
+    padding: 8px 0;
+    background: none;
+    box-sizing: border-box;
 }
-
 @keyframes marquee {
     0%   { transform: translateX(100vw);}
     100% { transform: translateX(-100%);}
 }
-
 @media (max-width: 767px) {
     .bible-verse-animate {
         font-size: 0.9rem;
-        padding: 6px 12px;
-        max-width: 98vw;
+        min-width: 300vw;
+        padding: 6px 0;
     }
 }
 

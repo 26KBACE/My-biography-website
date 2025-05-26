@@ -1,5 +1,6 @@
 /* ====== Modern Attractive Styles for Brian Mong'are Website ====== */
 
+/* Base Styles */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background: #f4f6fa;
@@ -168,7 +169,8 @@ label {
 }
 
 /* 
-  On mobile, stack portfolio documents vertically. Each portfolio PDF will take full width and appear one below the other.
+  On mobile, stack portfolio documents vertically.
+  Each portfolio PDF will take full width and appear one below the other.
   This improves readability and usability on small screens.
 */
 @media (max-width: 767px) {
@@ -207,6 +209,25 @@ label {
     background: #1abc9c;
     color: #fff;
     box-shadow: 0 4px 24px rgba(26,42,62,0.10);
+}
+
+/* Home Button */
+.btn-home {
+    background: #eee;
+    color: #222c35;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    box-shadow: 0 1px 8px rgba(26,42,62,0.04);
+    transition: background 0.2s, color 0.2s;
+    margin-top: 1rem;
+}
+.btn-home:hover, .btn-home:focus {
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Socials */

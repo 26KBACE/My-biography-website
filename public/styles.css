@@ -1,8 +1,5 @@
 /* ====== Modern Attractive Styles for Brian Mong'are Website ====== */
 
-/* Font imports (add in HTML or here if using preprocessors) */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap'); */
-
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background: #f4f6fa;
@@ -11,7 +8,6 @@ body {
     padding: 0;
 }
 
-/* Typography */
 h1, h2, h3, .navbar-brand {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -171,7 +167,7 @@ label {
     background: #fff;
 }
 
-/* Enable horizontal scroll on mobile */
+/* Enable horizontal scroll and better readability on mobile */
 @media (max-width: 767px) {
     #portfolio .row {
         flex-wrap: nowrap;
@@ -180,14 +176,16 @@ label {
         gap: 1rem;
     }
     #portfolio .col-md-6 {
-        flex: 0 0 80vw;
-        max-width: 80vw;
-        min-width: 250px;
+        flex: 0 0 100vw;
+        max-width: 100vw;
+        min-width: 100vw;
+        padding: 0;
     }
     #portfolio .pdf-viewer {
-        width: 100%;
-        min-width: 220px;
-        height: 220px;
+        width: 100vw;
+        min-width: 100vw;
+        height: 80vh;
+        min-height: 350px;
     }
 }
 
@@ -202,7 +200,7 @@ label {
     padding: 0.6rem 1.8rem;
     transition: background 0.2s, box-shadow 0.2s;
 }
-.btn-primary:hover {
+.btn-primary:hover, .btn-outline-primary:hover {
     background: #1abc9c;
     color: #fff;
     box-shadow: 0 4px 24px rgba(26,42,62,0.10);

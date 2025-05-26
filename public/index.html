@@ -3,44 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brian Mong'are: Forex trader, data analyst, and cybersecurity enthusiast from Nakuru, Kenya. Explore my skills and projects.">
-    <meta property="og:title" content="Brian Mong'are | Forex Trader, Data Analyst, Cybersecurity">
-    <meta property="og:description" content="Portfolio site for Brian Mong'are: Forex trader, data analyst, and cybersecurity enthusiast from Nakuru, Kenya.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/brian-photo.jpg">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="google-site-verification" content="i97_Rg7QRx0aL97mc9ACQQPb-6oBqOxR75xbGO4T6Cg" />
     <title>Brian Mong'are | Forex Trader, Data Analyst, Cybersecurity</title>
+    <meta name="description" content="Brian Mong'are: Forex trader, data analyst, and cybersecurity enthusiast from Nakuru, Kenya.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        body { font-family: 'Century Gothic', Arial, sans-serif; }
+        body { font-family: 'Roboto', Arial, sans-serif; background: #f4f6fa; }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; }
+        .navbar { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .navbar-brand { font-weight: 700; letter-spacing: 1px; }
+        .nav-link { color: #3498db !important; transition: color 0.2s; }
+        .nav-link:hover { color: #1abc9c !important; }
+        header { background: linear-gradient(90deg, #1a1a2e 60%, #16213e 100%); color: #fff; }
         .bible-verse-animate {
             display: block;
-            width: 100%;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            padding: 8px 0;
+            background: rgba(52, 152, 219, 0.1);
+            color: #f1c40f;
+            border-radius: 0.5rem;
+            animation: marquee 18s linear infinite;
             white-space: nowrap;
             overflow: hidden;
-            box-sizing: border-box;
-            animation: marquee 18s linear infinite;
         }
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        .pdf-viewer { width: 100%; height: 350px; border: none; }
-        .social-icon { width: 24px; vertical-align: middle; margin-right: 5px; }
-        .gallery-img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
-        .job-card { background: #f8f9fa; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.04);}
-        .profile-img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; }
-        nav a { color: #fff; margin: 0 10px; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
+        section { margin-bottom: 3rem; }
+        .profile-img { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 16px rgba(26,42,62,0.2);}
+        .bio { background: #fff; border-radius: 1rem; box-shadow: 0 4px 16px rgba(52,152,219,0.07); padding: 2rem; }
+        .gallery-img { width: 100%; height: 170px; object-fit: cover; border-radius: 0.7rem; transition: transform 0.3s; box-shadow: 0 2px 10px rgba(52,152,219,0.07);}
+        .gallery-img:hover { transform: scale(1.08);}
+        .job-card { background: #fafbfc; border-radius: 1rem; padding: 1.5rem 1rem; box-shadow: 0 2px 10px rgba(26,42,62,0.05); margin-bottom: 1.5rem;}
+        .pdf-viewer { width: 100%; height: 300px; border: none; border-radius: 8px; box-shadow: 0 2px 10px rgba(52,152,219,0.07);}
+        .btn-primary, .btn-primary:active, .btn-primary:focus { background: #3498db; border: none; border-radius: 2rem; }
+        .btn-primary:hover { background: #1abc9c;}
+        .socials a { display: inline-block; margin: 0 8px; color: #3498db; font-weight: 500; }
+        .socials a:hover { color: #1abc9c;}
+        .social-icon { width: 22px; margin-right: 4px; vertical-align: middle;}
+        footer { background: #1a1a2e; color: #fff; font-size: 1rem; margin-top: 4rem; }
+        /* Section backgrounds */
+        #gallery, #portfolio { background: #fff; border-radius: 1rem; padding: 2rem 1rem; box-shadow: 0 4px 16px rgba(52,152,219,0.07);}
+        #videos { background: #f9fafb; border-radius: 1rem; padding: 2rem 1rem;}
+        #experience, #education { background: #fff; border-radius: 1rem; padding: 2rem 1rem; }
+        #contact { background: #f9fafb; border-radius: 1rem; padding: 2rem 1rem;}
+        #youtube { background: #fff; border-radius: 1rem; padding: 2rem 1rem;}
+        label { font-weight: 500; }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
         <a class="navbar-brand" href="/">Brian Mong'are</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -62,9 +78,10 @@
     </nav>
 
     <!-- Header (Homepage Introduction) -->
-    <header class="text-center py-3 bg-dark text-white">
-        <h1><b>Welcome, I'm Brian Mong'are</b></h1>
-        <p>
+    <header class="text-center py-5">
+        <img src="images/brian-photo.jpg" alt="Brian Mong'are" class="profile-img mb-3 shadow">
+        <h1 class="mb-2"><b>Welcome, I'm Brian Mong'are</b></h1>
+        <p class="lead">
           A God-centered innovator, Forex trader, data analyst, and cybersecurity enthusiast based in Nakuru, Kenya.<br>
           I empower others through technology, digital solutions, and authentic mentorship.<br>
           Whether analyzing markets or crafting the perfect chapati, I strive to leave every space better than I found it.<br>
@@ -74,67 +91,61 @@
     </header>
 
     <main class="container my-4 text-center">
-
         <!-- About Section -->
         <section id="about" class="bio mb-5">
-            <img src="images/archives.jpg" alt="Brian Mong'are" class="profile-img mb-3" loading="lazy">
-            <div class="bio-text">
-                <h2>About Me</h2>
-                <p>
-                    <strong>
-                        "I am a God-centered innovator on a mission to transform lives through truth, technology, and empowerment.
-                        My purpose is to uncover and share truth rooted in the Word of God, build digital solutions that educate and uplift, 
-                        and mentor others through applied knowledge in design, cybersecurity, forex, and digital marketing. Through resilience,
-                        continuous learning, and kingdom-driven passion, I create a path for others to break limitations and rise into their 
-                        divine purpose—one skill, one truth, and one testimony at a time."
-                    </strong>
-                </p>
-                <p>
-                    Off the screen, I’m a skilled chapati maker—yes, the kind that makes you question your life choices after the first 
-                    bite. If there's one thing I've learned, it's that whether you're rolling dough or rolling out a project, precision 
-                    and passion make all the difference.
-                </p>
-                <p>
-                    I also share authentic Biblical insights on my 
-                    <a href="https://www.youtube.com/@Brian_2000k" target="_blank" rel="noopener">YouTube channel</a>, connecting with viewers in a 
-                    meaningful way.
-                </p>
-                <p>
-                    In every space I work—digital or otherwise—I aim to leave things better than I found them. Let’s create something impactful, together.
-                    Contact me via the form below if you wish to interact with me further.
-                </p>
-            </div>
+            <h2 class="mb-3">About Me</h2>
+            <p>
+                <strong>
+                I am a God-centered innovator on a mission to transform lives through truth, technology, and empowerment.
+                My purpose is to uncover and share truth rooted in the Word of God, build digital solutions that educate and uplift,
+                and mentor others through applied knowledge in design, cybersecurity, forex, and digital marketing.
+                Through resilience, continuous learning, and kingdom-driven passion, I create a path for others to break limitations and rise into their
+                divine purpose—one skill, one truth, and one testimony at a time.
+                </strong>
+            </p>
+            <p>
+                Off the screen, I’m a skilled chapati maker—yes, the kind that makes you question your life choices after the first bite.
+                If there's one thing I've learned, it's that whether you're rolling dough or rolling out a project, precision and passion make all the difference.
+            </p>
+            <p>
+                I also share authentic Biblical insights on my
+                <a href="https://www.youtube.com/@Brian_2000k" target="_blank" rel="noopener">YouTube channel</a>, connecting with viewers in a meaningful way.
+            </p>
+            <p>
+                In every space I work—digital or otherwise—I aim to leave things better than I found them. Let’s create something impactful, together.
+                Contact me via the form below if you wish to interact with me further.
+            </p>
         </section>
 
         <!-- Gallery -->
-        <section id="gallery" class="gallery my-4">
-            <h2>Gallery</h2>
+        <section id="gallery" class="my-4">
+            <h2 class="mb-4">Gallery</h2>
             <div class="row justify-content-center">
-                <div class="col-6 col-md-3 mb-2"><img src="images/brian-photo.jpg" alt="Brian Mong'are portrait" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/personal.jpg" alt="Brian Mong'are personal" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/trading.jpg" alt="Forex trading" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/design1.jpg" alt="Design project 1" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/design2.jpg" alt="Design project 2" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/tech1.jpg" alt="Tech project 1" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/tech2.jpg" alt="Tech project 2" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/cyber.jpg" alt="Cybersecurity project" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/chapati1.jpg" alt="Making chapati 1" class="gallery-img" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-2"><img src="images/chapati2.jpg" alt="Making chapati 2" class="gallery-img" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/brian-photo.jpg" alt="Brian Mong'are portrait" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/personal.jpg" alt="Brian Mong'are personal" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/trading.jpg" alt="Forex trading" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/design1.jpg" alt="Design project 1" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/design2.jpg" alt="Design project 2" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/tech1.jpg" alt="Tech project 1" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/tech2.jpg" alt="Tech project 2" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/cyber.jpg" alt="Cybersecurity project" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/chapati1.jpg" alt="Making chapati 1" class="gallery-img shadow-sm" loading="lazy"></div>
+                <div class="col-6 col-md-3 mb-3"><img src="images/chapati2.jpg" alt="Making chapati 2" class="gallery-img shadow-sm" loading="lazy"></div>
             </div>
         </section>
 
         <!-- Videos Section -->
-        <section id="videos" class="videos my-4">
-            <h2>Videos</h2>
+        <section id="videos" class="my-4">
+            <h2 class="mb-4">Videos</h2>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 mb-3">
-                    <video width="100%" controls poster="images/video1-poster.jpg">
+                    <video width="100%" controls poster="images/video1-poster.jpg" style="border-radius: 1rem; box-shadow:0 2px 10px rgba(52,152,219,0.07);">
                         <source src="videos/video1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="col-12 col-md-6 mb-3">
-                    <video width="100%" controls poster="images/video2-poster.jpg">
+                    <video width="100%" controls poster="images/video2-poster.jpg" style="border-radius: 1rem; box-shadow:0 2px 10px rgba(52,152,219,0.07);">
                         <source src="videos/video2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -143,24 +154,24 @@
         </section>
 
         <!-- Experience -->
-        <section id="experience" class="experience my-4">
-            <h2>Experience</h2>
-            <div class="job-card mx-auto mb-3">
+        <section id="experience" class="my-4">
+            <h2 class="mb-4">Experience</h2>
+            <div class="job-card mx-auto">
                 <h3>Professional Forex Trader - XM</h3>
                 <p><em>Dec 2020 - Present | Nakuru, Kenya</em></p>
                 <p>I run my own forex trading, using all kinds of analysis (technical, fundamental, sentiment, intermarket) to make smart moves. 4+ years in, I focus on risk management and profit strategies.</p>
             </div>
-            <div class="job-card mx-auto mb-3">
+            <div class="job-card mx-auto">
                 <h3>Professional Freelancer - Generation Kenya</h3>
                 <p><em>June 2024 - Present | Nakuru, Kenya</em></p>
                 <p>I do digital freelancing: scheduling, proofreading, data analysis, graphic design, client chats, and admin support—trained to be pro and helpful.</p>
             </div>
-            <div class="job-card mx-auto mb-3">
+            <div class="job-card mx-auto">
                 <h3>Cyber Café Operator - Roney Cyber Nakuru</h3>
                 <p><em>Jan 2025 - Apr 2025 | Nakuru, Kenya</em></p>
                 <p>I help people with formatting, printing, scanning, internet stuff, and questions—keeping things running smoothly.</p>
             </div>
-            <div class="job-card mx-auto mb-3">
+            <div class="job-card mx-auto">
                 <h3>Junior Digital Archiving Specialist - Kenya National Archives</h3>
                 <p><em>Sep 2022 - Nov 2022 | Nakuru, Kenya</em></p>
                 <p>I organized and digitized records—cataloging, retrieving, and preserving them carefully.</p>
@@ -168,18 +179,18 @@
         </section>
 
         <!-- Education -->
-        <section id="education" class="education my-4">
-            <h2>Education</h2>
-            <p>
+        <section id="education" class="my-4">
+            <h2 class="mb-4">Education</h2>
+            <div>
                 <strong>Egerton University</strong><br>
                 Information Science, Library and Information Science<br>
                 September 2019 - October 2023
-            </p>
+            </div>
         </section>
 
         <!-- Portfolio: PDFs -->
-        <section id="portfolio" class="portfolio my-4">
-            <h2>Portfolio & Documents</h2>
+        <section id="portfolio" class="my-4">
+            <h2 class="mb-4">Portfolio & Documents</h2>
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-2"><iframe src="docs/portfolio1.pdf" class="pdf-viewer" loading="lazy" title="Portfolio 1"></iframe></div>
                 <div class="col-md-6 mb-2"><iframe src="docs/portfolio2.pdf" class="pdf-viewer" loading="lazy" title="Portfolio 2"></iframe></div>
@@ -187,8 +198,8 @@
         </section>
 
         <!-- Contact Form -->
-        <section id="contact" class="contact my-4">
-            <h2>Contact Me</h2>
+        <section id="contact" class="my-4">
+            <h2 class="mb-4">Contact Me</h2>
             <form id="contact-form" name="contact-form" method="POST" data-netlify="true" class="mx-auto" style="max-width: 400px;">
                 <input type="hidden" name="form-name" value="contact-form" />
                 <input type="hidden" name="subject" value="New message from my website" />
@@ -208,34 +219,36 @@
             </form>
         </section>
 
-       <!-- YouTube -->
-<section id="youtube" class="youtube my-4">
-    <h2>My YouTube Channel</h2>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
-            <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/U36c-zIokds?si=PIggvwMtQmfYv5m3"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        <!-- YouTube -->
+        <section id="youtube" class="my-4">
+            <h2 class="mb-4">My YouTube Channel</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/U36c-zIokds?si=PIggvwMtQmfYv5m3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-3 bg-dark text-white">
-        <p>
-            &copy; 2025 Brian Mong'are | Built by Brian Mong'are<br>
-            Kiamunyi, High Ridge Estate, Nakuru, Kenya | 0115848503 | 0703884049 | 0100230662 | 
-            <a href="mailto:brianmongare207@gmail.com" class="text-white">brianmongare207@gmail.com</a>
-        </p>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/brianmongare-digitalfreelancer/" target="_blank" rel="noopener"><img src="images/linkedin-icon.png" alt="LinkedIn" class="social-icon">LinkedIn</a>
-            <a href="https://facebook.com/profile.php?id=61561167606986" target="_blank" rel="noopener"><img src="images/facebook-icon.png" alt="Facebook" class="social-icon">Facebook</a>
-            <a href="https://x.com/sltofthea" target="_blank" rel="noopener"><img src="images/x-icon.png" alt="X" class="social-icon">X</a>
-            <a href="https://www.youtube.com/@Brian_2000k" target="_blank" rel="noopener"><img src="images/youtube-icon.png" alt="YouTube" class="social-icon">YouTube</a>
+    <footer class="text-center py-4">
+        <div class="container">
+            <div class="mb-2">
+                &copy; 2025 Brian Mong'are | Built by Brian Mong'are<br>
+                Kiamunyi, High Ridge Estate, Nakuru, Kenya | 0115848503 | 0703884049 | 0100230662 |
+                <a href="mailto:brianmongare207@gmail.com" class="text-white">brianmongare207@gmail.com</a>
+            </div>
+            <div class="socials mb-1">
+                <a href="https://www.linkedin.com/in/brianmongare-digitalfreelancer/" target="_blank" rel="noopener"><img src="images/linkedin-icon.png" alt="LinkedIn" class="social-icon">LinkedIn</a>
+                <a href="https://facebook.com/profile.php?id=61561167606986" target="_blank" rel="noopener"><img src="images/facebook-icon.png" alt="Facebook" class="social-icon">Facebook</a>
+                <a href="https://x.com/sltofthea" target="_blank" rel="noopener"><img src="images/x-icon.png" alt="X" class="social-icon">X</a>
+                <a href="https://www.youtube.com/@Brian_2000k" target="_blank" rel="noopener"><img src="images/youtube-icon.png" alt="YouTube" class="social-icon">YouTube</a>
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

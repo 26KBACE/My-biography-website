@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Mong'are | Hacker Portfolio</title>
-  <meta name="description" content="Brian Mong'are - Cyberpunk Hacker Portfolio: Projects, Tools, Blog, Certifications, and Contact.">
-  <link rel="stylesheet" href="styles.css">
-  <!-- SEO and Schema -->
-  <link rel="canonical" href="https://yourdomain.com/">
-  <meta property="og:title" content="Brian Mong'are | Hacker Portfolio">
-  <meta property="og:description" content="Explore projects, tools, blog, certifications, and contact info in a cyberpunk hacker theme.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/">
-  <!-- FAQ Schema for rich results -->
+  <title>Brian Mong’are | Cyberpunk Portfolio</title>
+  <meta name="description" content="Brian Mong'are: Cybersecurity Enthusiast, Data Analyst, Information Scientist, SEO Marketing Specialist, Professional Forex Trader, and Virtual Assistant from Nakuru, Kenya.">
+
+  <!-- Social Meta -->
+  <meta property="og:title" content="Brian Mong’are | Cyberpunk Portfolio">
+  <meta property="og:description" content="Portfolio of Brian Mong’are, Cybersecurity Enthusiast, Data Analyst, and SEO Marketing Specialist.">
+  <meta property="og:image" content="images/meta-image.png">
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Schema.org (Personal Portfolio) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Brian Mong’are",
+    "email": "brianmongare207@gmail.com",
+    "jobTitle": [
+      "Cybersecurity Enthusiast",
+      "Data Analyst",
+      "Information Scientist",
+      "SEO Marketing Specialist",
+      "Professional Forex Trader",
+      "Virtual Assistant"
+    ],
+    "image": "https://brianmongare.netlify.app/images/meta-image.png",
+    "url": "https://brianmongare.netlify.app/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nakuru",
+      "addressCountry": "Kenya"
+    },
+    "alumniOf": "Egerton University",
+    "sameAs": [
+      "https://www.linkedin.com/in/brianmongare-digitalfreelancer",
+      "mailto:brianmongare207@gmail.com"
+    ]
+  }
+  </script>
+  <!-- FAQ Schema for Featured Snippets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,146 +50,208 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is this website about?",
+        "name": "What services does Brian Mong’are offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "This is Brian Mong'are's cyberpunk hacker portfolio featuring projects, tools, blog, certifications, and secure contact."
+          "text": "Cybersecurity, data analysis, digital marketing, forex trading, and virtual assistance."
         }
       },
       {
         "@type": "Question",
-        "name": "How can I contact Brian?",
+        "name": "How can I contact Brian Mong’are?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Use the secure contact form on the website to reach out."
+          "text": "Through the secure contact form, email (brianmongare207@gmail.com), or LinkedIn."
         }
       }
     ]
   }
   </script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="terminal-bg">
+<body>
   <!-- Animated Matrix Background -->
   <canvas id="matrix-bg" aria-hidden="true"></canvas>
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container nav-flex">
-      <a href="#home" class="brand" aria-label="Go to Home">Brian Mong'are</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
-      <ul id="nav-menu" class="nav-menu" role="menubar">
-        <li><a href="#home" class="nav-link" role="menuitem">Home</a></li>
-        <li><a href="#projects" class="nav-link" role="menuitem">Projects/Lab</a></li>
-        <li><a href="#tools" class="nav-link" role="menuitem">Tools</a></li>
-        <li><a href="#blog" class="nav-link" role="menuitem">Blog</a></li>
-        <li><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
-        <li><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+
+  <header class="hero-section" id="home">
+    <nav class="navbar" role="navigation">
+      <a href="#home" class="brand">Brian Mong’are</a>
+      <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certs" class="nav-link">Certifications</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects/Lab</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#tools" class="nav-link">Tools</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+    </nav>
+    <div class="hero-content">
+      <div>
+        <h1>Brian Mong’are</h1>
+        <p class="tagline">Cybersecurity Enthusiast | Data Analyst | Information Scientist | SEO Marketing Specialist | Professional Forex Trader | Virtual Assistant</p>
+        <p class="location"><span class="icon-location"></span>Nakuru, Kenya</p>
+        <p>
+          <a href="mailto:brianmongare207@gmail.com" class="contact-link">brianmongare207@gmail.com</a> | 
+          <a href="tel:0115848503" class="contact-link">0115848503</a>
+        </p>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/brianmongare-digitalfreelancer" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-hacker.svg" alt="LinkedIn"></a>
+          <a href="https://brianmongare.netlify.app" target="_blank" aria-label="Portfolio"><img src="images/portfolio-hacker.svg" alt="Portfolio"></a>
+        </div>
+      </div>
+      <img src="images/brian-avatar.png" alt="Brian Mong’are" class="hero-avatar" width="160" height="160"/>
     </div>
-  </nav>
+  </header>
 
   <main>
-    <!-- Home Section -->
-    <section id="home" class="section hero" aria-label="Home">
-      <div class="hero-content">
-        <h1 class="hacker-glow">Welcome, <span class="hacker-type"></span><span class="cursor">█</span></h1>
-        <p class="subtitle">Cyberpunk Portfolio | Ethical Hacking | Tech Lab | Modern Web</p>
-        <a href="#projects" class="cta-btn">Explore Projects</a>
-      </div>
-      <img src="images/hacker-avatar.svg" alt="Hacker Avatar" class="hero-img" width="210" height="210" />
+    <!-- About/Summary -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate cybersecurity enthusiast, data analyst, and information scientist with extensive experience in digital marketing, forex trading, and virtual assistance. My work is driven by adaptability, a client-focused mindset, and a commitment to continuous learning. I thrive at the intersection of technology and people, leveraging advanced analytics, ethical hacking, and marketing acumen to deliver impactful results. Whether tackling complex data challenges or optimizing digital presence, I bring a hacker's curiosity and a professional's dedication to every project.
+      </p>
     </section>
 
-    <!-- Projects/Lab Section -->
-    <section id="projects" class="section" aria-label="Projects and Lab">
-      <h2 class="section-title">Projects & Lab</h2>
-      <div class="project-grid">
-        <!-- Example Project Card -->
-        <article class="project-card">
-          <h3>Terminal Chatbot</h3>
-          <p>Real-time AI-powered chatbot in a terminal UI (JavaScript, Node.js).</p>
-          <a href="#" class="project-link">View Code</a>
-        </article>
-        <article class="project-card">
-          <h3>Hack-the-Box Automation</h3>
-          <p>Automated scripts for CTFs and hacking labs (Python, Bash).</p>
-          <a href="#" class="project-link">View Code</a>
-        </article>
-        <!-- Add more dynamically as needed -->
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><span class="icon-hacker"></span>Ethical Hacking</div>
+        <div class="skill-card"><span class="icon-pbi"></span>Microsoft Power BI</div>
+        <div class="skill-card"><span class="icon-seo"></span>SEO</div>
+        <div class="skill-card"><span class="icon-data"></span>Data Analysis (Excel, Power BI, Python)</div>
+        <div class="skill-card"><span class="icon-dm"></span>Digital Marketing</div>
+        <div class="skill-card"><span class="icon-admin"></span>Administrative Support</div>
+        <div class="skill-card"><span class="icon-forex"></span>Forex Trading</div>
+        <div class="skill-card"><span class="icon-info"></span>Information Science</div>
       </div>
     </section>
 
-    <!-- Tools Section -->
-    <section id="tools" class="section" aria-label="Tools">
-      <h2 class="section-title">Tools</h2>
-      <ul class="tools-list">
-        <li>
-          <img src="images/terminal-icon.svg" alt="Terminal Icon" width="32" height="32" />
-          <span>Custom CLI Toolset</span>
-        </li>
-        <li>
-          <img src="images/vpn-icon.svg" alt="VPN Icon" width="32" height="32" />
-          <span>VPN Switcher Script</span>
-        </li>
-        <li>
-          <img src="images/lock-icon.svg" alt="Lock Icon" width="32" height="32" />
-          <span>Password Generator</span>
-        </li>
+    <!-- Certifications -->
+    <section id="certs" class="section">
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li>Introduction to Career Skills in Data Analytics</li>
+        <li>Learning Data Analytics: 1 Foundations</li>
+        <li>Learning Data Analytics Part 2: Extending and Applying Core Knowledge</li>
+        <li>Career Essentials in Data Analysis by Microsoft and LinkedIn</li>
+        <li>Generation Programme Kenya</li>
       </ul>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="section" aria-label="Blog">
-      <h2 class="section-title">Blog</h2>
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <ul class="exp-list">
+        <li><strong>TCM Security</strong>: Cybersecurity Enthusiast (Jan 2025 – Present)</li>
+        <li><strong>Upwork/Fiverr/PeoplePerHour</strong>: Freelance Data Analyst (Apr 2025 – Present)</li>
+        <li><strong>Freelance Digital Marketing</strong> (May 2025 – Present)</li>
+        <li><strong>Generation Kenya</strong>: Professional Freelancer (Jun 2024 – Present)</li>
+        <li><strong>FBS Inc. & XM</strong>: Professional Forex Trader (2020 – Present)</li>
+        <li><strong>RONEY CYBER NAKURU</strong>: Cyber Café Operator (Jan 2025 – Apr 2025)</li>
+        <li><strong>Kenya National Archives</strong>: Information Scientist Intern (Sep 2022 – Nov 2022)</li>
+      </ul>
+    </section>
+
+    <!-- Projects/Lab -->
+    <section id="projects" class="section">
+      <h2>Projects & Lab</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Social Media Engagement Analysis</h3>
+          <p>Python scripts & dashboards to analyze and visualize audience engagement.</p>
+          <pre class="code-snippet"><code># Python sample: engagement trend
+import pandas as pd
+df = pd.read_csv('engagement.csv')
+print(df.groupby('month').mean())</code></pre>
+        </article>
+        <article class="project-card">
+          <h3>Retail Sales Data Visualization</h3>
+          <p>Power BI dashboard to track sales trends and KPIs.</p>
+          <img src="images/powerbi-dashboard.png" alt="Retail Sales Power BI Dashboard">
+        </article>
+        <article class="project-card">
+          <h3>Survey Results Cleaning and Reporting</h3>
+          <p>Automated survey data cleaning and reporting using Python and Excel.</p>
+        </article>
+        <article class="project-card">
+          <h3>SEO Case Study Website</h3>
+          <p>End-to-end SEO optimization and ranking improvements for a client.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section">
+      <h2>Blog</h2>
       <div class="blog-list">
         <article class="blog-post">
-          <h3>How to Secure Your Digital Life</h3>
-          <p>Modern tips for endpoint security, privacy, and digital hygiene (2025).</p>
-          <a href="#" class="blog-link">Read More</a>
+          <h3>Top 5 Cybersecurity Tips for Freelancers in 2025</h3>
+          <p>Protect your data, identity, and online business with these actionable tips...</p>
+          <a href="#" class="blog-link">Read more</a>
         </article>
         <article class="blog-post">
-          <h3>Best Free Hacking Tools in 2025</h3>
-          <p>Review and usage tips for powerful open-source tools.</p>
-          <a href="#" class="blog-link">Read More</a>
+          <h3>How to Leverage Data Analytics in Digital Marketing</h3>
+          <p>Unlock marketing ROI with data-driven strategies and Power BI dashboards...</p>
+          <a href="#" class="blog-link">Read more</a>
         </article>
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section" aria-label="Certifications">
-      <h2 class="section-title">Certifications</h2>
-      <ul class="cert-list">
-        <li>
-          <img src="images/cert-icon.svg" alt="Certification Icon" width="32" height="32" />
-          <span>CompTIA Security+ (2024)</span>
-        </li>
-        <li>
-          <img src="images/cert-icon.svg" alt="Certification Icon" width="32" height="32" />
-          <span>Google Cybersecurity Certificate (2025)</span>
-        </li>
+    <!-- Tools -->
+    <section id="tools" class="section">
+      <h2>Favorite Tools</h2>
+      <div class="tools-flex">
+        <div class="tool-card"><span class="icon-excel"></span>Excel</div>
+        <div class="tool-card"><span class="icon-pbi"></span>Power BI</div>
+        <div class="tool-card"><span class="icon-python"></span>Python</div>
+        <div class="tool-card"><span class="icon-semrush"></span>SEMrush</div>
+        <div class="tool-card"><span class="icon-ga"></span>Google Analytics</div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Egerton University</strong>, BSc. Information Science (2019–2023)</li>
       </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section" aria-label="Contact">
-      <h2 class="section-title">Contact</h2>
-      <!-- Secure Contact Form -->
-      <form id="contactForm" method="POST" action="https://formspree.io/f/yourformid" class="contact-form" autocomplete="on">
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form id="contact-form" method="POST" action="https://formspree.io/f/yourformid" class="contact-form">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required minlength="2" maxlength="40" autocomplete="name" aria-required="true" />
+        <input id="name" name="name" type="text" required autocomplete="name" />
         <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" required autocomplete="email" aria-required="true" />
+        <input id="email" name="email" type="email" required autocomplete="email" />
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" aria-required="true"></textarea>
-        <button type="submit" class="cta-btn">Send Secure Message</button>
+        <textarea id="message" name="message" required rows="6"></textarea>
+        <button type="submit" class="btn-hacker">Send Secure Message</button>
       </form>
+      <div class="contact-links">
+        <a href="mailto:brianmongare207@gmail.com"><span class="icon-mail"></span>Email</a>
+        <a href="tel:0115848503"><span class="icon-phone"></span>Call</a>
+        <a href="https://www.linkedin.com/in/brianmongare-digitalfreelancer" target="_blank"><span class="icon-linkedin"></span>LinkedIn</a>
+        <a href="https://brianmongare.netlify.app" target="_blank"><span class="icon-globe"></span>Portfolio</a>
+        <a href="docs/Brian_Mongare_Resume.pdf" download><span class="icon-download"></span>Download Resume (PDF)</a>
+      </div>
     </section>
   </main>
 
-  <footer class="footer" aria-label="Footer">
-    <div>
-      <small>&copy; 2025 Brian Mong'are. All rights reserved. | <a href="#contact">Contact</a></small>
-    </div>
-    <div>
-      <small>Designed with <span aria-label="Terminal love">&#x1F5A5;</span> | Hacker Portfolio Theme</small>
-    </div>
+  <footer>
+    <p>&copy; 2025 Brian Mong’are. All rights reserved.</p>
+    <p class="footer-links">
+      <a href="#home">Home</a> | 
+      <a href="#contact">Contact</a> | 
+      <a href="https://brianmongare.netlify.app" target="_blank">Portfolio</a>
+    </p>
+    <p>Built with 💻 in Nakuru, Kenya. Cyberpunk Hacker Theme.</p>
   </footer>
 
   <script src="scripts.js"></script>

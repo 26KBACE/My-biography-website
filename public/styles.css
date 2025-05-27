@@ -174,7 +174,6 @@ nav.navbar {
   width: 32px;
   height: 32px;
   margin: 0 0.3em;
-  position: center;
   filter: drop-shadow(0 0 6px var(--accent));
 }
 

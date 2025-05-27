@@ -35,10 +35,11 @@ if (canvas) {
 // ======= Responsive mobile nav toggle =======
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
-if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
+navToggle.addEventListener('click', function() {
+  navMenu.classList.toggle('active');
+  const expanded = navMenu.classList.contains('active');
+  navToggle.setAttribute('aria-expanded', expanded);
+});
 }
 
 // ======= Keyboard accessibility: close menu with ESC =======

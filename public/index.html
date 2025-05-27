@@ -3,238 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Mong'are | Advanced Portfolio</title>
-  <meta name="description" content="Brian Mong'are: Forex trader, data analyst, cybersecurity enthusiast, and mentor.">
+  <title>Brian Mong'are | Hacker Portfolio</title>
+  <meta name="description" content="Brian Mong'are: Ethical Hacker, Data Analyst, Cybersecurity Enthusiast">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" href="images/hacker.ico">
 </head>
 <body>
+  <!-- Matrix Rain Background -->
+  <canvas id="matrix-bg"></canvas>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm terminal-nav">
     <div class="container">
-      <a class="navbar-brand" href="#">Brian Mong'are</a>
+      <a class="navbar-brand hacker-font neon-green" href="#">root@brian:~$</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item">
-            <button id="darkToggle" class="btn btn-sm btn-dark ms-2" aria-label="Toggle dark mode">🌙</button>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">about()</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">skills()</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">projects()</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">gallery()</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">contact()</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-section text-center d-flex align-items-center justify-content-center flex-column" id="home">
-    <img src="images/brian-photo.jpg" alt="Brian Mong'are" class="hero-img shadow" />
-    <h1 class="display-4 mt-3">I'm <span class="text-primary">Brian Mong'are</span></h1>
-    <span id="typed" class="typed-roles"></span>
-    <p class="lead mt-3">Transforming lives through truth, technology, and empowerment.<br>Forex Trader • Data Analyst • Cybersecurity Enthusiast • Mentor</p>
-    <div class="mt-3">
-      <a href="#contact" class="btn btn-primary btn-lg me-2">Hire Me</a>
-      <a href="docs/BrianMongareCV.pdf" class="btn btn-outline-primary btn-lg" target="_blank" rel="noopener">Download CV</a>
-    </div>
-    <div class="marquee-scroll mt-4" aria-label="Inspirational Quote">
-      <span class="bible-verse-animate">
-        "True success is forged through meticulous preparation, disciplined execution, and the wisdom gained from failure."
+  <header class="hero-section text-center d-flex align-items-center justify-content-center flex-column">
+    <img src="images/brian-photo.jpg" alt="Brian Mong'are" class="hacker-img-glitch shadow mb-2" />
+    <h1 class="display-4 neon-green mt-3 hacker-font hacker-glitch">Brian Mong'are</h1>
+    <span id="typed" class="typed-roles terminal-font neon-green"></span>
+    <p class="lead mt-3 terminal-font neon-green">Ethical Hacker & Cybersecurity Enthusiast</p>
+    <pre class="terminal-bar">root@brian:~$ <span class="typed-quote"></span><span class="blinking-cursor">█</span></pre>
+    <div class="marquee-scroll mt-3 terminal-font neon-green">
+      <span>
+        "Hacking isn't just about code; it's about curiosity, persistence, and thinking outside the box."
       </span>
     </div>
   </header>
 
-  <main class="container my-5">
+  <main class="container my-5" style="position: relative; z-index: 2;">
     <!-- About -->
-    <section id="about" class="section" data-aos="fade-up">
-      <h2 class="section-title">About Me</h2>
+    <section id="about" class="section terminal-card" data-aos="fade-up">
+      <h2 class="section-title neon-green hacker-font">about()</h2>
       <p>
-        I am a God-centered innovator on a mission to transform lives through truth, technology, and empowerment.
-        My purpose is to uncover and share truth rooted in the Word of God, build digital solutions that educate and uplift,
-        and mentor others through applied knowledge in design, cybersecurity, forex, and digital marketing.
+        <span class="neon-green">[+]</span> Hi, I’m Brian, a cybersecurity enthusiast, ethical hacker, and data analyst passionate about breaking, fixing, and securing the digital world.
+        I thrive in CTFs, code audits, and building robust systems. <br>
+        <span class="neon-green">[+]</span> My mission: empower, educate, and defend in the cyber realm.<br>
+        <span class="neon-green">[+]</span> Skills: Python, Linux, Penetration Testing, Web Security, Digital Forensics.
       </p>
       <ul class="list-inline socials">
         <li class="list-inline-item"><a href="https://linkedin.com/in/brianmongare-digitalfreelancer/" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a></li>
-        <li class="list-inline-item"><a href="https://facebook.com/profile.php?id=61561167606986" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
+        <li class="list-inline-item"><a href="https://github.com/26KBACE" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a></li>
         <li class="list-inline-item"><a href="https://x.com/sltofthea" target="_blank"><img src="images/x-icon.png" alt="X"></a></li>
-        <li class="list-inline-item"><a href="https://www.youtube.com/@Brian_2000k" target="_blank"><img src="images/youtube-icon.png" alt="YouTube"></a></li>
       </ul>
     </section>
 
-    <!-- Skills (with progress bars) -->
-    <section id="skills" class="section" data-aos="fade-up">
-      <h2 class="section-title">Skills</h2>
+    <!-- Skills -->
+    <section id="skills" class="section terminal-card" data-aos="fade-up">
+      <h2 class="section-title neon-green hacker-font">skills()</h2>
+      <ul class="terminal-list">
+        <li><span class="neon-green">root@brian:</span> Python, Bash, JavaScript</li>
+        <li><span class="neon-green">root@brian:</span> Linux (Kali, Ubuntu), Windows</li>
+        <li><span class="neon-green">root@brian:</span> Penetration Testing, CTFs, Bug Bounties</li>
+        <li><span class="neon-green">root@brian:</span> Web Security, Digital Forensics</li>
+        <li><span class="neon-green">root@brian:</span> Social Engineering & OSINT</li>
+        <li><span class="neon-green">root@brian:</span> Data Analysis (Pandas, Numpy)</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section terminal-card" data-aos="fade-up">
+      <h2 class="section-title neon-green hacker-font">projects()</h2>
       <div class="row">
-        <div class="col-md-4 col-6 mb-3">
-          <h5>Forex Trading</h5>
-          <div class="progress"><div class="progress-bar bg-primary" style="width: 95%;">95%</div></div>
+        <div class="col-md-4 mb-4">
+          <div class="terminal-project-card">
+            <h5 class="neon-green">CTF Toolkit</h5>
+            <p class="terminal-font">A Swiss Army Knife for CTFs: encoders, decoders, hash tools, and more.</p>
+            <a href="#" class="btn btn-outline-success btn-sm" target="_blank">GitHub</a>
+          </div>
         </div>
-        <div class="col-md-4 col-6 mb-3">
-          <h5>Data Analysis</h5>
-          <div class="progress"><div class="progress-bar bg-primary" style="width: 90%;">90%</div></div>
+        <div class="col-md-4 mb-4">
+          <div class="terminal-project-card">
+            <h5 class="neon-green">Web Vulnerability Scanner</h5>
+            <p class="terminal-font">Automated scanner for XSS, SQLi, and common web vuln classes.</p>
+            <a href="#" class="btn btn-outline-success btn-sm" target="_blank">GitHub</a>
+          </div>
         </div>
-        <div class="col-md-4 col-6 mb-3">
-          <h5>Cybersecurity</h5>
-          <div class="progress"><div class="progress-bar bg-primary" style="width: 80%;">80%</div></div>
-        </div>
-        <div class="col-md-4 col-6 mb-3">
-          <h5>Web Design</h5>
-          <div class="progress"><div class="progress-bar bg-primary" style="width: 85%;">85%</div></div>
-        </div>
-        <div class="col-md-4 col-6 mb-3">
-          <h5>Python & JavaScript</h5>
-          <div class="progress"><div class="progress-bar bg-primary" style="width: 80%;">80%</div></div>
-        </div>
-        <div class="col-md-4 col-6 mb-3">
-          <h5>Mentorship</h5>
-          <div class="progress"><div class="progress-bar bg-primary" style="width: 95%;">95%</div></div>
+        <div class="col-md-4 mb-4">
+          <div class="terminal-project-card">
+            <h5 class="neon-green">Network Packet Analyzer</h5>
+            <p class="terminal-font">Python tool for capturing and analyzing network traffic.</p>
+            <a href="#" class="btn btn-outline-success btn-sm" target="_blank">GitHub</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects (Filterable) -->
-    <section id="projects" class="section" data-aos="fade-up">
-      <h2 class="section-title">Projects</h2>
-      <div class="mb-3">
-        <button class="btn btn-outline-primary btn-sm project-filter active" data-filter="all">All</button>
-        <button class="btn btn-outline-primary btn-sm project-filter" data-filter="web">Web</button>
-        <button class="btn btn-outline-primary btn-sm project-filter" data-filter="python">Python</button>
-        <button class="btn btn-outline-primary btn-sm project-filter" data-filter="data">Data</button>
-      </div>
-      <div class="row" id="project-list">
-        <div class="col-md-4 project" data-type="web">
-          <div class="card h-100">
-            <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Personal Portfolio</h5>
-              <p class="card-text">A modern, responsive personal website built with HTML, CSS, and JS.</p>
-              <a href="https://github.com/26KBACE/my-biography-website" target="_blank" class="btn btn-sm btn-primary">GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 project" data-type="python">
-          <div class="card h-100">
-            <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Forex Analysis Bot</h5>
-              <p class="card-text">A Python bot for technical & fundamental market analysis and alerts.</p>
-              <a href="#" class="btn btn-sm btn-primary disabled">Private Repo</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 project" data-type="data">
-          <div class="card h-100">
-            <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Data Dashboard</h5>
-              <p class="card-text">Interactive dashboard for visualizing trading performance using Chart.js.</p>
-              <a href="#" class="btn btn-sm btn-primary disabled">Demo soon</a>
-            </div>
-          </div>
-        </div>
-        <!-- Add more projects here -->
-      </div>
-    </section>
-
-    <!-- Gallery (Lightbox) -->
-    <section id="gallery" class="section" data-aos="fade-up">
-      <h2 class="section-title">Gallery</h2>
+    <!-- Gallery -->
+    <section id="gallery" class="section terminal-card" data-aos="fade-up">
+      <h2 class="section-title neon-green hacker-font">gallery()</h2>
       <div class="row g-3">
         <div class="col-6 col-md-3">
-          <a href="images/brian-photo.jpg" class="glightbox" data-gallery="gallery1"><img src="images/brian-photo.jpg" class="gallery-img shadow-sm" alt="Brian Mong'are"></a>
+          <img src="images/hacker1.jpg" class="gallery-img shadow-sm" alt="Hacker moment">
         </div>
         <div class="col-6 col-md-3">
-          <a href="images/trading.jpg" class="glightbox" data-gallery="gallery1"><img src="images/trading.jpg" class="gallery-img shadow-sm" alt="Trading"></a>
+          <img src="images/hacker2.jpg" class="gallery-img shadow-sm" alt="CTF">
         </div>
         <div class="col-6 col-md-3">
-          <a href="images/design1.jpg" class="glightbox" data-gallery="gallery1"><img src="images/design1.jpg" class="gallery-img shadow-sm" alt="Design"></a>
+          <img src="images/hacker3.jpg" class="gallery-img shadow-sm" alt="Code Audit">
         </div>
         <div class="col-6 col-md-3">
-          <a href="images/chapati1.jpg" class="glightbox" data-gallery="gallery1"><img src="images/chapati1.jpg" class="gallery-img shadow-sm" alt="Chapati"></a>
+          <img src="images/hacker4.jpg" class="gallery-img shadow-sm" alt="Network">
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Carousel -->
-    <section id="testimonials" class="section" data-aos="fade-up">
-      <h2 class="section-title">Testimonials</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <blockquote class="blockquote text-center">
-              <p class="mb-4">"Brian's mentorship helped me land my first freelance job! Highly recommended."</p>
-              <footer class="blockquote-footer">Samuel O.</footer>
-            </blockquote>
-          </div>
-          <div class="carousel-item">
-            <blockquote class="blockquote text-center">
-              <p class="mb-4">"A true professional in both data analysis and trading. Reliable and insightful."</p>
-              <footer class="blockquote-footer">Jane K.</footer>
-            </blockquote>
-          </div>
-          <div class="carousel-item">
-            <blockquote class="blockquote text-center">
-              <p class="mb-4">"Brian's training in cybersecurity was practical and easy to follow."</p>
-              <footer class="blockquote-footer">Mercy W.</footer>
-            </blockquote>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact" class="section" data-aos="fade-up">
-      <h2 class="section-title">Contact Me</h2>
+    <!-- Contact -->
+    <section id="contact" class="section terminal-card" data-aos="fade-up">
+      <h2 class="section-title neon-green hacker-font">contact()</h2>
       <form id="contact-form" class="mx-auto" style="max-width:400px;">
-        <div class="mb-2 text-start">
-          <label for="name" class="form-label">Your Name</label>
-          <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
-        </div>
-        <div class="mb-2 text-start">
-          <label for="email" class="form-label">Your Email</label>
-          <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="mb-2 text-start">
-          <label for="message" class="form-label">Your Message</label>
-          <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-        <div id="form-status" class="mt-2"></div>
+        <label for="name" class="form-label neon-green">name:</label>
+        <input type="text" id="name" name="name" class="form-control terminal-font mb-2" placeholder="Your Name" required>
+        <label for="email" class="form-label neon-green">email:</label>
+        <input type="email" id="email" name="email" class="form-control terminal-font mb-2" placeholder="Your Email" required>
+        <label for="message" class="form-label neon-green">message:</label>
+        <textarea id="message" name="message" class="form-control terminal-font mb-2" rows="3" required placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn-success w-100 terminal-font">send()</button>
+        <div id="form-status" class="mt-2 terminal-font"></div>
       </form>
       <div class="text-center my-4">
-        <a href="#home" class="btn btn-secondary btn-home">&larr; Back to Home</a>
+        <a href="#home" class="btn btn-outline-success btn-home terminal-font">&larr; back to home</a>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="text-center py-4">
-    <div class="container">
-      <div class="mb-2">
-        &copy; 2025 Brian Mong'are | Nakuru, Kenya | <a href="mailto:brianmongare207@gmail.com">brianmongare207@gmail.com</a>
-      </div>
-    </div>
+  <footer class="text-center py-3 terminal-bar neon-green terminal-font">
+    &copy; 2025 Brian Mong'are | root@brian:~$
   </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

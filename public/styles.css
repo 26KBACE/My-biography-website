@@ -170,9 +170,16 @@ nav.navbar {
   height: 120px;
   background: var(--panel);
 }
+.hero-socials {
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering if you set a height */
+  margin: 0 auto;           /* optional: extra centering for block containers */
+  gap: 20px;                /* space between icons */
+}
 .hero-socials a img {
-  width: 32px;
-  height: 32px;
+  height: 40px; /* adjust as needed */
+  width: auto;
   margin: 0 0.3em;
   filter: drop-shadow(0 0 6px var(--accent));
 }

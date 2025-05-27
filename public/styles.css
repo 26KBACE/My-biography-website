@@ -1,277 +1,203 @@
-/* ====== Modern Attractive Styles for Brian Mong'are Website ====== */
-
-/* Base Styles */
+/* General Styles */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background: #f4f6fa;
-    color: #222c35;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f4f6fa;
+  color: #222c35;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background: #181818;
+  color: #f1f1f1;
+}
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-h1, h2, h3, .navbar-brand {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
+.hero-section {
+  min-height: 70vh;
+  background: linear-gradient(90deg, #1a1a2e 60%, #16213e 100%);
+  color: #fff;
+  padding: 4rem 0 2rem 0;
+  position: relative;
 }
-
-.lead {
-    font-size: 1.25rem;
-    color: #34495e;
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2rem;
+  border: 4px solid #fff;
 }
-
-a {
-    color: #3498db;
-    transition: color 0.2s;
-    text-decoration: none;
+.typed-roles {
+  display: block;
+  font-size: 1.3rem;
+  color: #f1c40f;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+  min-height: 38px;
 }
-
-a:hover, .nav-link:hover, .socials a:hover {
-    color: #1abc9c !important;
-    text-decoration: underline;
-}
-
-/* Navbar */
-.navbar {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    font-family: 'Montserrat', sans-serif;
-    background: #fff !important;
-}
-.navbar-brand {
-    font-weight: 700;
-    color: #3498db !important;
-}
-.nav-link {
-    color: #3498db !important;
-    margin: 0 10px;
-}
-.nav-link.active {
-    color: #1abc9c !important;
-}
-
-/* Header */
-header {
-    background: linear-gradient(90deg, #1a1a2e 60%, #16213e 100%);
-    color: #fff;
-    padding-bottom: 2.5rem;
-    box-shadow: 0 4px 24px rgba(26,42,62,0.07);
-}
-
-/* Bible Verse Marquee -- NO BACKGROUND, ONLY TEXT, SLOWER ANIMATION */
 .marquee-scroll {
-    width: 100vw;
-    overflow-x: hidden;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 0;
 }
 .bible-verse-animate {
-    display: inline-block;
-    font-size: 1.15rem;
-    color: #f1c40f;
-    border-radius: 0;
-    white-space: nowrap;
-    min-width: 200vw;
-    animation: marquee 32s linear infinite;
-    padding: 8px 0;
-    background: none;
-    box-sizing: border-box;
+  display: inline-block;
+  font-size: 1.08rem;
+  color: #f1c40f;
+  white-space: nowrap;
+  min-width: 200vw;
+  animation: marquee 28s linear infinite;
+  padding: 8px 0;
 }
 @keyframes marquee {
-    0%   { transform: translateX(100vw);}
-    100% { transform: translateX(-100%);}
+  0%   { transform: translateX(100vw);}
+  100% { transform: translateX(-100%);}
 }
-@media (max-width: 767px) {
-    .bible-verse-animate {
-        font-size: 0.9rem;
-        min-width: 300vw;
-        padding: 6px 0;
-    }
+.btn-home {
+  background: #eee;
+  color: #222c35;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  box-shadow: 0 1px 8px rgba(26,42,62,0.04);
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1rem;
 }
-
-/* Section Styling */
-section {
-    margin-bottom: 3rem;
-}
-
-#gallery, #portfolio, #experience, #education, #youtube {
-    background: #fff;
-    border-radius: 1rem;
-    padding: 2rem 1rem;
-    box-shadow: 0 4px 16px rgba(52,152,219,0.07);
+.btn-home:hover, .btn-home:focus {
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
 }
 
-#videos, #contact {
-    background: #f9fafb;
-    border-radius: 1rem;
-    padding: 2rem 1rem;
+/* Skills Progress Bars */
+.progress {
+  height: 1.2rem;
+  background: #e9ecef;
+  border-radius: 1rem;
+}
+.progress-bar {
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
-label {
-    font-weight: 500;
+/* Projects */
+.project {
+  margin-bottom: 2rem;
+  display: block;
 }
-
-/* Profile Image */
-.profile-img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 4px 16px rgba(26,42,62,0.2);
-    margin-bottom: 1rem;
+.project[hidden] {
+  display: none !important;
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(52,152,219,0.07);
+}
+.card-img-top {
+  border-radius: 1rem 1rem 0 0;
+  height: 180px;
+  object-fit: cover;
+}
+.project-filter.active,
+.project-filter:focus {
+  background: #3498db;
+  color: #fff;
 }
 
 /* Gallery */
 .gallery-img {
-    width: 100%;
-    height: auto;
-    max-height: 170px;
-    object-fit: contain;
-    border-radius: 0.7rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 10px rgba(52,152,219,0.07);
-    background: #fff;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(52,152,219,0.07);
+  background: #fff;
 }
 .gallery-img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 24px rgba(52,152,219,0.14);
+  transform: scale(1.06);
+  box-shadow: 0 6px 24px rgba(52,152,219,0.14);
 }
 
-/* Cards and Containers */
-.bio, .job-card {
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(52,152,219,0.07);
-    padding: 2rem 2rem 1rem 2rem;
-    margin-bottom: 2rem;
+/* Carousel */
+.carousel-item blockquote {
+  font-size: 1.18rem;
 }
-.job-card {
-    background: #fafbfc;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem 1rem;
+.carousel-control-next, .carousel-control-prev {
+  filter: invert(1);
 }
 
-/* Portfolio PDFs */
-#portfolio .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+/* Contact Form */
+#contact-form {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(52,152,219,0.07);
+  padding: 2rem 1rem;
 }
-
-#portfolio .pdf-viewer {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(52,152,219,0.07);
-    margin-bottom: 1rem;
-    background: #fff;
+#form-status {
+  min-height: 1.5em;
+  font-weight: 500;
 }
-
-/* 
-  On mobile, stack portfolio documents vertically.
-  Each portfolio PDF will take full width and appear one below the other.
-  This improves readability and usability on small screens.
-*/
-@media (max-width: 767px) {
-    #portfolio .row {
-        flex-wrap: wrap;
-        overflow-x: visible;
-        gap: 1rem;
-    }
-    #portfolio .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-width: 0;
-        padding: 0;
-    }
-    #portfolio .pdf-viewer {
-        width: 100%;
-        min-width: 0;
-        height: 60vw;
-        min-height: 220px;
-        max-height: 70vw;
-    }
-}
-
-/* Buttons */
-.btn-primary, .btn-primary:active, .btn-primary:focus {
-    background: #3498db;
-    border: none;
-    border-radius: 2rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-    box-shadow: 0 2px 16px rgba(52,152,219,0.05);
-    padding: 0.6rem 1.8rem;
-    transition: background 0.2s, box-shadow 0.2s;
-}
-.btn-primary:hover, .btn-outline-primary:hover {
-    background: #1abc9c;
-    color: #fff;
-    box-shadow: 0 4px 24px rgba(26,42,62,0.10);
-}
-
-/* Home Button */
-.btn-home {
-    background: #eee;
-    color: #222c35;
-    border-radius: 2rem;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    box-shadow: 0 1px 8px rgba(26,42,62,0.04);
-    transition: background 0.2s, color 0.2s;
-    margin-top: 1rem;
-}
-.btn-home:hover, .btn-home:focus {
-    background: #3498db;
-    color: #fff;
-    text-decoration: none;
+input, textarea {
+  background: #f4f6fa !important;
 }
 
 /* Socials */
-.socials a {
-    display: inline-block;
-    margin: 0 8px;
-    color: #3498db;
-    font-weight: 500;
-    font-size: 1.08rem;
-    transition: color 0.2s;
+.socials img {
+  width: 32px;
+  margin: 0 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: box-shadow 0.2s;
 }
-.social-icon {
-    width: 22px;
-    margin-right: 4px;
-    vertical-align: middle;
+.socials img:hover {
+  box-shadow: 0 0 8px #3498db44;
 }
 
 /* Footer */
 footer {
-    background: #1a1a2e;
-    color: #fff;
-    font-size: 1rem;
-    margin-top: 4rem;
-    border-top: 6px solid #3498db;
-    box-shadow: 0 -2px 12px rgba(26,42,62,0.09);
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 4rem;
+  border-top: 6px solid #3498db;
+  box-shadow: 0 -2px 12px rgba(26,42,62,0.09);
 }
 footer a {
-    color: #f1c40f;
-    text-decoration: underline;
+  color: #f1c40f;
+  text-decoration: underline;
 }
 footer a:hover {
-    color: #1abc9c;
+  color: #1abc9c;
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode, body.dark-mode .section, body.dark-mode #contact-form {
+  background: #181818 !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode .card, body.dark-mode .carousel-item, body.dark-mode #contact-form {
+  background: #232323 !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode .btn-home {
+  background: #232323;
+  color: #fff;
 }
 
 /* Responsive Tweaks */
 @media (max-width: 767px) {
-    .profile-img {
-        width: 110px;
-        height: 110px;
-    }
-    .bio, .job-card, #gallery, #portfolio, #experience, #education, #youtube, #videos, #contact {
-        padding: 1rem 0.5rem;
-    }
-    .bible-verse-animate {
-        font-size: 0.9rem;
-    }
+  .hero-img { width: 95px; height: 95px; }
+  .gallery-img { height: 100px; }
+  .section-title { font-size: 1.35rem; }
+  .card-img-top { height: 110px; }
+  .progress { height: 1rem; }
+  #contact-form { padding: 1rem 0.4rem; }
 }

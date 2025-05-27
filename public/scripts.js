@@ -1,102 +1,99 @@
-// ========== Matrix Rain Background ==========
+// ======= Matrix "Hacker" Animated Background =======
 const canvas = document.getElementById('matrix-bg');
 const ctx = canvas.getContext('2d');
-let matrixCols, matrixDrops, fontSize;
+let width = window.innerWidth, height = window.innerHeight;
+canvas.width = width;
+canvas.height = height;
 
-function resizeMatrix() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    fontSize = 18;
-    matrixCols = Math.floor(canvas.width / fontSize);
-    matrixDrops = Array(matrixCols).fill(1);
-}
-resizeMatrix();
-window.addEventListener('resize', resizeMatrix);
+const fontSize = 18;
+const columns = Math.floor(width / fontSize);
+const drops = Array(columns).fill(1);
 
 function drawMatrix() {
-    ctx.fillStyle = 'rgba(17,17,17,0.17)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = fontSize + "px 'Share Tech Mono', monospace";
-    ctx.fillStyle = "#33ff66";
-    for(let i = 0; i < matrixCols; i++) {
-        const text = String.fromCharCode(0x30A0 + Math.random()*96);
-        ctx.fillText(text, i * fontSize, matrixDrops[i] * fontSize);
-        if (Math.random() > 0.975) matrixDrops[i] = 0;
-        matrixDrops[i]++;
-        if(matrixDrops[i] * fontSize > canvas.height && Math.random() > 0.95)
-            matrixDrops[i] = 0;
-    }
+  ctx.fillStyle = 'rgba(10,10,10,0.18)';
+  ctx.fillRect(0, 0, width, height);
+  ctx.font = fontSize + "px 'Share Tech Mono', monospace";
+  ctx.fillStyle = "#39ff14";
+  for (let i = 0; i < drops.length; i++) {
+    const text = String.fromCharCode(0x30A0 + Math.random() * 96);
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    if (Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
+    if (drops[i] * fontSize > height && Math.random() > 0.95) drops[i] = 0;
+  }
 }
-setInterval(drawMatrix, 44);
-
-// ========== Typing Effect for Hero ==========
-const heroStrings = [
-    "Welcome to Brian Mong'are's Terminal Portfolio.",
-    "God-centered Innovator | Forex Trader | Data Analyst | Cybersecurity Enthusiast",
-    "Empowering through truth, technology, and mentorship.",
-    "Type 'help' to explore my story, skills, and projects."
-];
-let heroIndex = 0, charIndex = 0, typing = true;
-
-function typeHero() {
-    const target = document.getElementById('typed-hero');
-    if (!target) return;
-    if (typing) {
-        if (charIndex <= heroStrings[heroIndex].length) {
-            target.textContent = heroStrings[heroIndex].slice(0, charIndex++);
-            setTimeout(typeHero, 38);
-        } else {
-            typing = false;
-            setTimeout(typeHero, 1200);
-        }
-    } else {
-        charIndex = 0;
-        heroIndex = (heroIndex + 1) % heroStrings.length;
-        typing = true;
-        setTimeout(typeHero, 500);
-    }
-}
-typeHero();
-
-// ========== Dark/Light Mode Toggle ==========
-const darkToggle = document.getElementById('darkToggle');
-darkToggle.onclick = function() {
-    document.body.classList.toggle('light-mode');
-    document.body.classList.toggle('dark-mode');
-    // Adjust matrix color
-    if(document.body.classList.contains('light-mode')) {
-        ctx.fillStyle = 'rgba(244,246,250,0.12)';
-    } else {
-        ctx.fillStyle = 'rgba(17,17,17,0.17)';
-    }
-};
-
-// ========== Section Reveal on Scroll ==========
-function revealSections() {
-    document.querySelectorAll('.reveal').forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 90) {
-            sec.classList.add('visible');
-        }
-    });
-}
-window.addEventListener('scroll', revealSections);
-window.addEventListener('load', revealSections);
-
-// ========== Responsive Nav (optional, minimal JS) ==========
-const navToggle = document.getElementById('nav-toggle');
-if(navToggle) {
-    navToggle.onclick = function() {
-        document.getElementById('navbarNav').classList.toggle('show');
-    };
-}
-
-// ========== Smooth Scroll (optional) ==========
-document.querySelectorAll('a.nav-link').forEach(link => {
-    link.onclick = function(e) {
-        if(this.hash && document.querySelector(this.hash)) {
-            e.preventDefault();
-            document.querySelector(this.hash).scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
+setInterval(drawMatrix, 45);
+window.addEventListener('resize', () => {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
 });
+// ======= End Matrix Background =======
+
+// ======= Mobile Navbar Toggle =======
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+  navToggle.setAttribute(
+    'aria-expanded',
+    navMenu.classList.contains('show') ? 'true' : 'false'
+  );
+});
+// ======= End Navbar Toggle =======
+
+// ======= Animated Typing Effect =======
+const hackerStrings = [
+  "root@brian:~$ Welcome to my digital lab...",
+  "root@brian:~$ Ethical Hacker. Builder. Mentor.",
+  "root@brian:~$ Explore my projects, tools, and blog.",
+  "root@brian:~$ Contact securely below."
+];
+let typeIndex = 0, charIndex = 0, isDeleting = false;
+const typeTarget = document.querySelector('.hacker-type');
+function typeEffect() {
+  if (!typeTarget) return;
+  let current = hackerStrings[typeIndex];
+  if (!isDeleting) {
+    typeTarget.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1200);
+    } else {
+      setTimeout(typeEffect, 55);
+    }
+  } else {
+    typeTarget.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      typeIndex = (typeIndex + 1) % hackerStrings.length;
+      setTimeout(typeEffect, 500);
+    } else {
+      setTimeout(typeEffect, 26);
+    }
+  }
+}
+typeEffect();
+// ======= End Typing Effect =======
+
+// ======= Accessible skip nav (optional for voice/keyboard) =======
+const skipLink = document.createElement('a');
+skipLink.href = "#main";
+skipLink.className = "skip-link";
+skipLink.textContent = "Skip to main content";
+document.body.prepend(skipLink);
+
+// ======= Contact Form anti-spam (simple honeypot for bots) =======
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    // You can add a hidden input here named "website" or similar.
+    // If filled, block submission (bots usually fill all fields).
+    const honeypot = document.getElementById('website');
+    if (honeypot && honeypot.value) {
+      e.preventDefault();
+      alert('Spam detected. Submission blocked.');
+    }
+  });
+}

@@ -23,6 +23,21 @@ html, body {
   font-family: var(--font-hacker);
   min-height: 100%;
   scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #matrix-bg {
@@ -110,7 +125,6 @@ nav.navbar {
   .nav-menu.open { display: flex; }
 }
 
-/* HERO */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -171,12 +185,13 @@ nav.navbar {
   border-radius: 1.1em;
   box-shadow: 0 0 18px var(--shadow);
   max-width: 950px;
+  width: 100%;
   position: relative;
   z-index: 2;
 }
 .section h2 {
   color: var(--heading);
-  font-size: 1.25em;
+  font-size: 1.5em;
   letter-spacing: 1.2px;
   margin-bottom: 1em;
   text-shadow: 0 0 7px var(--primary);
@@ -196,6 +211,8 @@ nav.navbar {
   border-radius: 0.8em;
   padding: 0.8em 1.2em;
   min-width: 140px;
+  max-width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 0 6px var(--shadow);
   font-size: 1em;
   margin-bottom: 0.5em;
@@ -235,6 +252,7 @@ nav.navbar {
   flex: 1 1 300px;
   margin: 0.4em;
   transition: transform 0.17s, box-shadow 0.17s;
+  box-sizing: border-box;
 }
 .project-card:hover {
   transform: scale(1.03);
@@ -335,6 +353,8 @@ nav.navbar {
   font-size: 1em;
   outline: none;
   transition: border 0.15s;
+  width: 100%;
+  box-sizing: border-box;
 }
 .contact-form input:focus, .contact-form textarea:focus {
   border-color: var(--accent);
@@ -386,9 +406,38 @@ footer {
 }
 footer .footer-links a { color: var(--heading); }
 
+/* Extra Responsive Styles */
+@media (max-width: 900px) {
+  .section {
+    max-width: 98%;
+    padding: 1.5em 0.6em;
+  }
+  .projects-grid, .skills-grid, .blog-list, .tools-flex {
+    gap: 0.5em;
+  }
+}
+
 @media (max-width: 650px) {
+  html, body {
+    font-size: 15px;
+  }
   .hero-section h1 { font-size: 1.1em; }
   .hero-avatar { width: 85px; height: 85px; }
   .section { padding: 1em 0.4em; }
   .skills-grid, .projects-grid, .blog-list, .tools-flex { flex-direction: column; align-items: center; }
+  .project-card, .blog-post, .skill-card, .tool-card { min-width: 90%; max-width: 98%; }
+  nav.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Ultra small screens */
+@media (max-width: 400px) {
+  html, body {
+    font-size: 13px;
+  }
+  .brand { font-size: 1.1em; }
+  .hero-section h1 { font-size: 1em; }
+  .section h2 { font-size: 1.1em; }
 }

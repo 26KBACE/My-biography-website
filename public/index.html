@@ -1,234 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brian Mong'are | Digital Hacker Portfolio</title>
-    <meta name="description" content="Brian Mong'are: Forex trader, data analyst, and cybersecurity enthusiast from Nakuru, Kenya.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brian Mong'are | Hacker Portfolio</title>
+  <meta name="description" content="Brian Mong'are - Cyberpunk Hacker Portfolio: Projects, Tools, Blog, Certifications, and Contact.">
+  <link rel="stylesheet" href="styles.css">
+  <!-- SEO and Schema -->
+  <link rel="canonical" href="https://yourdomain.com/">
+  <meta property="og:title" content="Brian Mong'are | Hacker Portfolio">
+  <meta property="og:description" content="Explore projects, tools, blog, certifications, and contact info in a cyberpunk hacker theme.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <!-- FAQ Schema for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is this website about?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is Brian Mong'are's cyberpunk hacker portfolio featuring projects, tools, blog, certifications, and secure contact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Brian?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the secure contact form on the website to reach out."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body class="dark-mode">
-    <canvas id="matrix-bg"></canvas>
-    <div class="scanline"></div>
-    <!-- Navigation -->
-    <nav class="navbar terminal-glow">
-      <div class="container">
-        <a class="navbar-brand" href="/">Brian Mong'are</a>
-        <button class="navbar-toggler" id="nav-toggle" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="#youtube">YouTube</a></li>
-          </ul>
-          <button id="darkToggle" class="btn btn-hacker">Toggle Theme</button>
-        </div>
+<body class="terminal-bg">
+  <!-- Animated Matrix Background -->
+  <canvas id="matrix-bg" aria-hidden="true"></canvas>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-flex">
+      <a href="#home" class="brand" aria-label="Go to Home">Brian Mong'are</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
+      <ul id="nav-menu" class="nav-menu" role="menubar">
+        <li><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+        <li><a href="#projects" class="nav-link" role="menuitem">Projects/Lab</a></li>
+        <li><a href="#tools" class="nav-link" role="menuitem">Tools</a></li>
+        <li><a href="#blog" class="nav-link" role="menuitem">Blog</a></li>
+        <li><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+        <li><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section hero" aria-label="Home">
+      <div class="hero-content">
+        <h1 class="hacker-glow">Welcome, <span class="hacker-type"></span><span class="cursor">█</span></h1>
+        <p class="subtitle">Cyberpunk Portfolio | Ethical Hacking | Tech Lab | Modern Web</p>
+        <a href="#projects" class="cta-btn">Explore Projects</a>
       </div>
-    </nav>
+      <img src="images/hacker-avatar.svg" alt="Hacker Avatar" class="hero-img" width="210" height="210" />
+    </section>
 
-    <!-- Terminal-style Hero -->
-    <header class="hacker-hero">
-        <div class="terminal-window">
-            <div class="terminal-bar">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="terminal-title">root@brian:~</span>
-            </div>
-            <div class="terminal-body">
-                <span class="prompt">&gt; </span>
-                <span id="typed-hero"></span>
-                <span class="blink-cursor">█</span>
-            </div>
-        </div>
-        <img src="images/brian-photo.jpg" alt="Brian Mong'are" class="profile-img hacker-img shadow">
-        <div class="marquee-scroll">
-            <span class="bible-verse-animate">
-              "True success is forged through meticulous preparation, disciplined execution, and the wisdom gained from failure."
-            </span>
-        </div>
-    </header>
+    <!-- Projects/Lab Section -->
+    <section id="projects" class="section" aria-label="Projects and Lab">
+      <h2 class="section-title">Projects & Lab</h2>
+      <div class="project-grid">
+        <!-- Example Project Card -->
+        <article class="project-card">
+          <h3>Terminal Chatbot</h3>
+          <p>Real-time AI-powered chatbot in a terminal UI (JavaScript, Node.js).</p>
+          <a href="#" class="project-link">View Code</a>
+        </article>
+        <article class="project-card">
+          <h3>Hack-the-Box Automation</h3>
+          <p>Automated scripts for CTFs and hacking labs (Python, Bash).</p>
+          <a href="#" class="project-link">View Code</a>
+        </article>
+        <!-- Add more dynamically as needed -->
+      </div>
+    </section>
 
-    <main class="container">
-        <!-- About Section -->
-        <section id="about" class="section-card reveal">
-            <h2>&#x1F512; About Me</h2>
-            <p>
-                <strong>
-                I am a God-centered innovator on a mission to transform lives through truth, technology, and empowerment.
-                My purpose is to uncover and share truth rooted in the Word of God, build digital solutions that educate and uplift,
-                and mentor others through applied knowledge in design, cybersecurity, forex, and digital marketing.
-                Through resilience, continuous learning, and kingdom-driven passion, I create a path for others to break limitations and rise into their
-                divine purpose—one skill, one truth, and one testimony at a time.
-                </strong>
-            </p>
-            <p>
-                Off the screen, I’m a skilled chapati maker—yes, the kind that makes you question your life choices after the first bite.
-                If there's one thing I've learned, it's that whether you're rolling dough or rolling out a project, precision and passion make all the difference.
-            </p>
-            <p>
-                I also share authentic Biblical insights on my
-                <a href="https://www.youtube.com/@Brian_2000k" target="_blank" rel="noopener">YouTube channel</a>, connecting with viewers in a meaningful way.
-            </p>
-            <p>
-                In every space I work—digital or otherwise—I aim to leave things better than I found them. Let’s create something impactful, together.
-                Contact me via the form below if you wish to interact with me further.
-            </p>
-        </section>
+    <!-- Tools Section -->
+    <section id="tools" class="section" aria-label="Tools">
+      <h2 class="section-title">Tools</h2>
+      <ul class="tools-list">
+        <li>
+          <img src="images/terminal-icon.svg" alt="Terminal Icon" width="32" height="32" />
+          <span>Custom CLI Toolset</span>
+        </li>
+        <li>
+          <img src="images/vpn-icon.svg" alt="VPN Icon" width="32" height="32" />
+          <span>VPN Switcher Script</span>
+        </li>
+        <li>
+          <img src="images/lock-icon.svg" alt="Lock Icon" width="32" height="32" />
+          <span>Password Generator</span>
+        </li>
+      </ul>
+    </section>
 
-        <!-- Gallery -->
-        <section id="gallery" class="section-card reveal">
-            <h2>&#x1F5BC; Gallery</h2>
-            <div class="row justify-content-center">
-                <div class="col-6 col-md-3 mb-3"><img src="images/brian-photo.jpg" alt="Brian Mong'are portrait" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/personal.jpg" alt="Brian Mong'are personal" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/trading.jpg" alt="Forex trading" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/design1.jpg" alt="Design project 1" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/design2.jpg" alt="Design project 2" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/tech1.jpg" alt="Tech project 1" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/tech2.jpg" alt="Tech project 2" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/cyber.jpg" alt="Cybersecurity project" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/chapati1.jpg" alt="Making chapati 1" class="gallery-img shadow-sm" loading="lazy"></div>
-                <div class="col-6 col-md-3 mb-3"><img src="images/chapati2.jpg" alt="Making chapati 2" class="gallery-img shadow-sm" loading="lazy"></div>
-            </div>
-        </section>
+    <!-- Blog Section -->
+    <section id="blog" class="section" aria-label="Blog">
+      <h2 class="section-title">Blog</h2>
+      <div class="blog-list">
+        <article class="blog-post">
+          <h3>How to Secure Your Digital Life</h3>
+          <p>Modern tips for endpoint security, privacy, and digital hygiene (2025).</p>
+          <a href="#" class="blog-link">Read More</a>
+        </article>
+        <article class="blog-post">
+          <h3>Best Free Hacking Tools in 2025</h3>
+          <p>Review and usage tips for powerful open-source tools.</p>
+          <a href="#" class="blog-link">Read More</a>
+        </article>
+      </div>
+    </section>
 
-        <!-- Videos Section -->
-        <section id="videos" class="section-card reveal">
-            <h2>&#x1F4F9; Videos</h2>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 mb-3">
-                    <video width="100%" controls poster="images/video1-poster.jpg" class="hacker-video">
-                        <source src="videos/video1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="col-12 col-md-6 mb-3">
-                    <video width="100%" controls poster="images/video2-poster.jpg" class="hacker-video">
-                        <source src="videos/video2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section" aria-label="Certifications">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="cert-list">
+        <li>
+          <img src="images/cert-icon.svg" alt="Certification Icon" width="32" height="32" />
+          <span>CompTIA Security+ (2024)</span>
+        </li>
+        <li>
+          <img src="images/cert-icon.svg" alt="Certification Icon" width="32" height="32" />
+          <span>Google Cybersecurity Certificate (2025)</span>
+        </li>
+      </ul>
+    </section>
 
-        <!-- Experience -->
-        <section id="experience" class="section-card reveal">
-            <h2>&#x1F4BB; Experience</h2>
-            <div class="job-card terminal-card mx-auto">
-                <h3>Professional Forex Trader - XM</h3>
-                <p><em>Dec 2020 - Present | Nakuru, Kenya</em></p>
-                <p>I run my own forex trading, using all kinds of analysis (technical, fundamental, sentiment, intermarket) to make smart moves. 4+ years in, I focus on risk management and profit strategies.</p>
-            </div>
-            <div class="job-card terminal-card mx-auto">
-                <h3>Professional Freelancer - Generation Kenya</h3>
-                <p><em>June 2024 - Present | Nakuru, Kenya</em></p>
-                <p>I do digital freelancing: scheduling, proofreading, data analysis, graphic design, client chats, and admin support—trained to be pro and helpful.</p>
-            </div>
-            <div class="job-card terminal-card mx-auto">
-                <h3>Cyber Café Operator - Roney Cyber Nakuru</h3>
-                <p><em>Jan 2025 - Apr 2025 | Nakuru, Kenya</em></p>
-                <p>I help people with formatting, printing, scanning, internet stuff, and questions—keeping things running smoothly.</p>
-            </div>
-            <div class="job-card terminal-card mx-auto">
-                <h3>Junior Digital Archiving Specialist - Kenya National Archives</h3>
-                <p><em>Sep 2022 - Nov 2022 | Nakuru, Kenya</em></p>
-                <p>I organized and digitized records—cataloging, retrieving, and preserving them carefully.</p>
-            </div>
-        </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section" aria-label="Contact">
+      <h2 class="section-title">Contact</h2>
+      <!-- Secure Contact Form -->
+      <form id="contactForm" method="POST" action="https://formspree.io/f/yourformid" class="contact-form" autocomplete="on">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="40" autocomplete="name" aria-required="true" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required autocomplete="email" aria-required="true" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000" aria-required="true"></textarea>
+        <button type="submit" class="cta-btn">Send Secure Message</button>
+      </form>
+    </section>
+  </main>
 
-        <!-- Education -->
-        <section id="education" class="section-card reveal">
-            <h2>&#x1F393; Education</h2>
-            <div>
-                <strong>Egerton University</strong><br>
-                Information Science, Library and Information Science<br>
-                September 2019 - October 2023
-            </div>
-        </section>
+  <footer class="footer" aria-label="Footer">
+    <div>
+      <small>&copy; 2025 Brian Mong'are. All rights reserved. | <a href="#contact">Contact</a></small>
+    </div>
+    <div>
+      <small>Designed with <span aria-label="Terminal love">&#x1F5A5;</span> | Hacker Portfolio Theme</small>
+    </div>
+  </footer>
 
-        <!-- Portfolio: PDFs (with Open Fullscreen button) -->
-        <section id="portfolio" class="section-card reveal">
-            <h2>&#x1F4C4; Portfolio & Documents</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6 mb-2">
-                    <iframe src="docs/portfolio1.pdf" class="pdf-viewer" loading="lazy" title="Portfolio 1"></iframe>
-                    <a href="docs/portfolio1.pdf" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-1 w-100">Open Fullscreen</a>
-                </div>
-                <div class="col-md-6 mb-2">
-                    <iframe src="docs/portfolio2.pdf" class="pdf-viewer" loading="lazy" title="Portfolio 2"></iframe>
-                    <a href="docs/portfolio2.pdf" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-1 w-100">Open Fullscreen</a>
-                </div>
-            </div>
-            <div class="text-center my-4">
-                <a href="/" class="btn btn-secondary btn-home">
-                    &larr; Back to Home
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact Form -->
-        <section id="contact" class="section-card reveal">
-            <h2>&#x1F4E7; Contact Me</h2>
-            <form id="contact-form" name="contact-form" method="POST" data-netlify="true" class="mx-auto" style="max-width: 400px;">
-                <input type="hidden" name="form-name" value="contact-form" />
-                <input type="hidden" name="subject" value="New message from my website" />
-                <div class="mb-2 text-start">
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="mb-2 text-start">
-                    <label for="email" class="form-label">Your Email</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="mb-2 text-start">
-                    <label for="message" class="form-label">Your Message</label>
-                    <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-hacker w-100">Send Message</button>
-            </form>
-        </section>
-
-        <!-- YouTube -->
-        <section id="youtube" class="section-card reveal">
-            <h2>&#x1F4FA; My YouTube Channel</h2>
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/U36c-zIokds?si=PIggvwMtQmfYv5m3"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer-glow">
-        <div class="container">
-            <div class="mb-2">
-                &copy; 2025 Brian Mong'are | Built by Brian Mong'are<br>
-                Kiamunyi, High Ridge Estate, Nakuru, Kenya | 0115848503 | 0703884049 | 0100230662 |
-                <a href="mailto:brianmongare207@gmail.com">brianmongare207@gmail.com</a>
-            </div>
-            <div class="socials mb-1">
-                <a href="https://www.linkedin.com/in/brianmongare-digitalfreelancer/" target="_blank" rel="noopener"><img src="images/linkedin-icon.png" alt="LinkedIn" class="social-icon">LinkedIn</a>
-                <a href="https://facebook.com/profile.php?id=61561167606986" target="_blank" rel="noopener"><img src="images/facebook-icon.png" alt="Facebook" class="social-icon">Facebook</a>
-                <a href="https://x.com/sltofthea" target="_blank" rel="noopener"><img src="images/x-icon.png" alt="X" class="social-icon">X</a>
-                <a href="https://www.youtube.com/@Brian_2000k" target="_blank" rel="noopener"><img src="images/youtube-icon.png" alt="YouTube" class="social-icon">YouTube</a>
-            </div>
-        </div>
-    </footer>
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

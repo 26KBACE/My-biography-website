@@ -1,4 +1,4 @@
-// Matrix "digital rain" animation for canvas background
+// 0/1 Matrix "digital rain" animation for canvas background
 const canvas = document.getElementById('matrix-bg');
 if (canvas) {
   const ctx = canvas.getContext('2d');
@@ -8,7 +8,7 @@ if (canvas) {
   }
   resizeMatrix();
 
-  const letters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズヅブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const digits = "01";
   const fontSize = 18;
   let columns = Math.floor(canvas.width / fontSize);
   let drops = Array(columns).fill(1);
@@ -20,7 +20,7 @@ if (canvas) {
     ctx.font = fontSize + 'px monospace';
 
     for (let i = 0; i < drops.length; i++) {
-      const text = letters[Math.floor(Math.random() * letters.length)];
+      const text = digits[Math.floor(Math.random() * digits.length)];
       ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
       if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {

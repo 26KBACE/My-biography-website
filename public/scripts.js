@@ -37,12 +37,25 @@ function drawMatrix() {
 }
 
 setInterval(drawMatrix, 50);
+
 // Hamburger menu toggle
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
 if (navToggle && navMenu) {
-  navToggle.addEventListener('click', function() {
+  navToggle.addEventListener('click', function(event) {
     navMenu.classList.toggle('active');
+    event.stopPropagation(); // Prevent click from bubbling up
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (
+      navMenu.classList.contains('active') &&
+      !navMenu.contains(event.target) &&
+      !navToggle.contains(event.target)
+    ) {
+      navMenu.classList.remove('active');
+    }
   });
 }

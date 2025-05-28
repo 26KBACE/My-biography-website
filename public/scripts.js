@@ -10,6 +10,8 @@ window.onload = function() {
   banner.style.textAlign = "center";
   banner.style.padding = "15px";
   banner.style.zIndex = "1000";
+  banner.style.fontWeight = "bold"; // Make text bold
+  banner.style.textTransform = "uppercase"; // Make text uppercase
   banner.innerText = "The website is currently being updated. Some features may not work as expected.";
   document.body.appendChild(banner);
 };

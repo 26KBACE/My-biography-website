@@ -37,3 +37,12 @@ function drawMatrix() {
 }
 
 setInterval(drawMatrix, 50);
+// Hamburger menu toggle
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+  });
+}

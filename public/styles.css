@@ -413,7 +413,7 @@ footer {
   color: var(--matrix-green);
   text-align: center;
   padding: 2rem 1rem 1.5rem 1rem;
-  position: absolute;
+  position: bottom;
   left: 0; right: 0;
   bottom: 0;
   font-size: 1.05rem;

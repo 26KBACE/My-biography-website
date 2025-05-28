@@ -9,7 +9,7 @@ window.onload = function() {
       50% { opacity: 0; }
     }
     .blinking {
-      animation: blink 1s infinite;
+      animation: blink 5s infinite;
     }
   `;
   document.head.appendChild(style);

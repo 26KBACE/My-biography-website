@@ -176,7 +176,7 @@ body {
 
 .hero-socials a {
   margin-right: 0.7rem;
-  display: inline-block;
+  display: contents;
   transition: transform 0.2s;
 }
 .hero-socials a:hover {

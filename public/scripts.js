@@ -1,4 +1,4 @@
-// Matrix Background Animation
+// Matrix Background Animation with 0s and 1s only
 const canvas = document.getElementById('matrix-bg');
 const ctx = canvas.getContext('2d');
 
@@ -10,12 +10,18 @@ resizeMatrixCanvas();
 
 window.addEventListener('resize', resizeMatrixCanvas);
 
-const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズヅブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*';
-const letters = katakana.split('');
+const digits = '01';
+const letters = digits.split('');
 
 const fontSize = 20;
-const columns = () => Math.floor(window.innerWidth / fontSize);
-let drops = Array(columns()).fill(1);
+function getColumns() {
+  return Math.floor(window.innerWidth / fontSize);
+}
+let drops = Array(getColumns()).fill(1);
+
+window.addEventListener('resize', () => {
+  drops = Array(getColumns()).fill(1);
+});
 
 function drawMatrix() {
   ctx.fillStyle = 'rgba(15, 17, 23, 0.15)';
@@ -48,7 +54,6 @@ if (navToggle) {
   });
 }
 
-// Close nav on link click (mobile UX)
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     if (window.innerWidth < 900) {
@@ -57,24 +62,11 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-// Contact form (optional enhancement) - feedback for user
+// Contact form UX feedback
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    // Basic UX feedback, you can replace with AJAX if needed
     contactForm.innerHTML = '<p style="color:#00ff41;font-weight:bold;">Thank you for your message! I will get back to you soon.</p>';
   });
 }
-
-// Ensure footer stays visible even if content is short
-window.addEventListener('DOMContentLoaded', () => {
-  const footer = document.querySelector('footer');
-  const body = document.body;
-  if (footer && body.offsetHeight < window.innerHeight) {
-    footer.style.position = 'fixed';
-    footer.style.bottom = '0';
-    footer.style.left = '0';
-    footer.style.right = '0';
-  }
-});

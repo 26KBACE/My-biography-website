@@ -1,6 +1,19 @@
-// Add this at the top of your public/scripts.js
+// MAINTAINANCE MODE
 window.onload = function() {
   var banner = document.createElement("div");
+  // Add a keyframes style for blinking
+  var style = document.createElement('style');
+  style.innerHTML = `
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .blinking {
+      animation: blink 1s infinite;
+    }
+  `;
+  document.head.appendChild(style);
+
   banner.style.position = "fixed";
   banner.style.top = "0";
   banner.style.left = "0";
@@ -10,11 +23,13 @@ window.onload = function() {
   banner.style.textAlign = "center";
   banner.style.padding = "15px";
   banner.style.zIndex = "1000";
-  banner.style.fontWeight = "bold"; // Make text bold
-  banner.style.textTransform = "uppercase"; // Make text uppercase
+  banner.style.fontWeight = "bold";
+  banner.style.textTransform = "uppercase";
+  banner.className = "blinking"; // Add the blinking class
   banner.innerText = "The website is currently being updated. Some features may not work as expected.";
   document.body.appendChild(banner);
 };
+
 // Binary Background Animation
 const canvas = document.getElementById('matrix-bg');
 const ctx = canvas.getContext('2d');

@@ -1,3 +1,18 @@
+// Add this at the top of your public/scripts.js
+window.onload = function() {
+  var banner = document.createElement("div");
+  banner.style.position = "fixed";
+  banner.style.top = "0";
+  banner.style.left = "0";
+  banner.style.width = "100%";
+  banner.style.backgroundColor = "#ffcc00";
+  banner.style.color = "#333";
+  banner.style.textAlign = "center";
+  banner.style.padding = "15px";
+  banner.style.zIndex = "1000";
+  banner.innerText = "The website is currently being updated. Some features may not work as expected.";
+  document.body.appendChild(banner);
+};
 // Binary Background Animation
 const canvas = document.getElementById('matrix-bg');
 const ctx = canvas.getContext('2d');

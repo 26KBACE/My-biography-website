@@ -195,9 +195,10 @@ body {
   border-radius: 50%;
   border: 3px solid var(--neon-pink);
   box-shadow: var(--border-pink);
-  width: 160px; height: 60px;
+  width: 160px; height: 160px;
   object-fit: cover;
   background: #101014;
+  margin-top: -10px; /* pulls the image upward */
 }
 
 /* Sections */

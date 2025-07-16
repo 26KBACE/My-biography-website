@@ -203,7 +203,7 @@ body {
 /* Sections */
 .section {
   background: var(--section-bg);
-  border-radius: 16px;
+  border-radius: 6px;
   box-shadow: 0 0 16px #00ff4140;
   margin: 2rem auto;
   padding: 2.5rem 2rem 2rem 2rem;
